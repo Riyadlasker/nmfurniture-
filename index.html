@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NM Furniture.BD | Luxury & Modern Furniture</title>
+    <title>NM Furniture.BD | Premium & Luxury Furniture</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     
@@ -30,14 +30,20 @@
             background-color: var(--bg-light);
             color: var(--text-dark);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* Top Bar - Hidden on Mobile */
+        /* Language Toggle Button Utility */
+        .lang-bn { display: inline; }
+        .lang-en { display: none; }
+
+        body.en-mode .lang-bn { display: none !important; }
+        body.en-mode .lang-en { display: inline !important; }
+
+        /* Top Bar */
         .top-bar {
             background: var(--primary);
             color: #fff;
-            padding: 10px 5%;
+            padding: 8px 5%;
             font-size: 0.85rem;
             display: flex;
             justify-content: space-between;
@@ -57,7 +63,7 @@
 
         .top-bar-info a:hover { color: var(--accent); }
 
-        /* Navigation Bar */
+        /* Navbar */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -77,7 +83,7 @@
         }
 
         .logo {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary);
             letter-spacing: -0.5px;
@@ -85,10 +91,16 @@
 
         .logo span { color: var(--accent); }
 
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 25px;
         }
 
         .nav-links a {
@@ -101,11 +113,26 @@
 
         .nav-links a:hover { color: var(--accent); }
 
+        .btn-lang {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .btn-lang:hover {
+            background: var(--accent-hover);
+        }
+
         /* Hero Banner */
         .hero {
-            background: linear-gradient(rgba(17, 24, 39, 0.75), rgba(17, 24, 39, 0.75)), url('https://raw.githubusercontent.com/Riyadlasker/nmfurniture-/main/picture/nm2.jpg') center/cover no-repeat;
-            height: 65vh;
-            min-height: 400px;
+            background: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.7)), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80') center/cover;
+            height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -120,12 +147,11 @@
             font-weight: 700;
             margin-bottom: 15px;
             letter-spacing: -1px;
-            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
+            font-size: 1.15rem;
+            margin-bottom: 30px;
             color: #e2e8f0;
             max-width: 650px;
         }
@@ -133,7 +159,7 @@
         .btn {
             background: var(--accent);
             color: #fff;
-            padding: 12px 28px;
+            padding: 12px 30px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
@@ -151,16 +177,16 @@
             transform: translateY(-2px);
         }
 
-        /* Products Grid Section */
+        /* Products Section */
         .container {
             max-width: 1280px;
-            margin: 50px auto;
+            margin: 60px auto;
             padding: 0 20px;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
         }
 
         .section-header h2 {
@@ -171,20 +197,19 @@
 
         .section-header p {
             color: var(--text-muted);
-            font-size: 0.95rem;
         }
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
         .product-card {
             background: var(--card-bg);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
             border: 1px solid #f1f5f9;
             transition: all 0.3s ease;
             display: flex;
@@ -192,14 +217,14 @@
         }
 
         .product-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
         }
 
         .product-img-wrapper {
             position: relative;
             width: 100%;
-            height: 260px;
+            height: 280px;
             overflow: hidden;
             background: #f1f5f9;
         }
@@ -222,7 +247,7 @@
             background: var(--primary);
             color: #fff;
             font-size: 0.75rem;
-            padding: 4px 12px;
+            padding: 5px 12px;
             border-radius: 20px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -230,7 +255,7 @@
         }
 
         .product-info {
-            padding: 20px;
+            padding: 24px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -239,15 +264,27 @@
         .product-title {
             font-size: 1.2rem;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             color: var(--primary);
         }
 
-        .product-desc {
+        .product-features {
+            list-style: none;
             font-size: 0.88rem;
             color: var(--text-muted);
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             flex-grow: 1;
+        }
+
+        .product-features li {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .product-features li i {
+            color: #10b981;
         }
 
         .product-bottom {
@@ -255,7 +292,7 @@
             justify-content: space-between;
             align-items: center;
             border-top: 1px solid #f1f5f9;
-            padding-top: 12px;
+            padding-top: 15px;
             gap: 8px;
         }
 
@@ -297,30 +334,29 @@
 
         .btn-order:hover { background: var(--accent); }
 
-        /* Online Order Form */
+        /* Order & Contact Form Section */
         .order-section {
             background: var(--card-bg);
             border-radius: 20px;
-            padding: 35px;
+            padding: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .form-group label {
             display: block;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             color: var(--primary);
-            font-size: 0.95rem;
         }
 
         .form-control {
             width: 100%;
-            padding: 12px 14px;
+            padding: 12px 16px;
             border: 1px solid #cbd5e1;
             border-radius: 8px;
             font-size: 0.95rem;
@@ -336,64 +372,63 @@
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 18px;
+            gap: 20px;
         }
 
         /* Contact & Location Section */
         .contact-card {
             background: var(--card-bg);
             border-radius: 20px;
-            padding: 35px;
+            padding: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.04);
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 40px;
         }
 
         .contact-info h3 {
-            font-size: 1.6rem;
-            margin-bottom: 18px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
             color: var(--primary);
         }
 
         .info-item {
             display: flex;
             align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 18px;
-            font-size: 0.95rem;
+            gap: 15px;
+            margin-bottom: 20px;
         }
 
         .info-item i {
             font-size: 1.2rem;
             color: var(--accent);
-            margin-top: 3px;
+            margin-top: 4px;
         }
 
         .social-box {
-            margin-top: 25px;
+            margin-top: 30px;
         }
 
         .social-box h4 {
-            margin-bottom: 10px;
-            font-size: 0.95rem;
+            margin-bottom: 12px;
+            font-size: 1rem;
         }
 
         .social-links {
             display: flex;
-            gap: 10px;
+            gap: 12px;
         }
 
         .social-links a {
-            width: 42px;
-            height: 42px;
+            width: 45px;
+            height: 45px;
             background: var(--bg-light);
             color: var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 8px;
-            font-size: 1.1rem;
+            border-radius: 10px;
+            font-size: 1.2rem;
             text-decoration: none;
             transition: 0.3s;
         }
@@ -406,25 +441,25 @@
         .map-box iframe {
             width: 100%;
             height: 100%;
-            min-height: 280px;
+            min-height: 300px;
             border-radius: 12px;
             border: none;
         }
 
-        /* Floating WhatsApp Button for Mobile & PC */
+        /* Floating WhatsApp Button */
         .whatsapp-float {
             position: fixed;
-            width: 55px;
-            height: 55px;
             bottom: 25px;
             right: 25px;
             background-color: #25d366;
-            color: #FFF;
+            color: #fff;
             border-radius: 50px;
             text-align: center;
-            font-size: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 24px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
             z-index: 1000;
+            width: 55px;
+            height: 55px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -434,7 +469,6 @@
 
         .whatsapp-float:hover {
             transform: scale(1.1);
-            background-color: #128c7e;
         }
 
         /* Footer */
@@ -442,42 +476,20 @@
             background: var(--primary);
             color: #94a3b8;
             text-align: center;
-            padding: 25px;
-            margin-top: 60px;
-            font-size: 0.88rem;
+            padding: 30px;
+            margin-top: 80px;
+            font-size: 0.9rem;
         }
 
         footer strong { color: #fff; }
 
-        /* Responsive Breakpoints for Mobile Devices */
+        /* Responsive */
         @media (max-width: 900px) {
-            .top-bar { display: none; }
-            
-            .navbar {
-                flex-direction: column;
-                gap: 12px;
-                padding: 0.8rem 5%;
-            }
-
-            .nav-links {
-                gap: 15px;
-                font-size: 0.88rem;
-            }
-
-            .hero h1 { font-size: 2.1rem; }
-            .hero p { font-size: 0.95rem; }
-
             .contact-card { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
-            
-            .order-section, .contact-card {
-                padding: 22px;
-            }
-
-            .product-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 20px;
-            }
+            .top-bar { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; } /* Simplified mobile header */
         }
     </style>
 </head>
@@ -494,25 +506,47 @@
     <header>
         <div class="navbar">
             <div class="logo">NM Furniture.<span>BD</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">হোম</a></li>
-                <li><a href="#products">কলেকশন</a></li>
-                <li><a href="#order">অনলাইন অর্ডার</a></li>
-                <li><a href="#contact">যোগাযোগ</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#home"><span class="lang-bn">হোম</span><span class="lang-en">Home</span></a></li>
+                    <li><a href="#products"><span class="lang-bn">কলেকশন</span><span class="lang-en">Collection</span></a></li>
+                    <li><a href="#order"><span class="lang-bn">অনলাইন অর্ডার</span><span class="lang-en">Order Online</span></a></li>
+                    <li><a href="#contact"><span class="lang-bn">যোগাযোগ</span><span class="lang-en">Contact</span></a></li>
+                </ul>
+                <button class="btn-lang" onclick="toggleLanguage()">
+                    <span class="lang-bn">English</span>
+                    <span class="lang-en">বাংলা</span>
+                </button>
+            </div>
         </div>
     </header>
 
     <section class="hero" id="home">
-        <h1>আভিজাত্য ও আরামের অনন্য সমন্বয়</h1>
-        <p>আপনার ঘরের সৌন্দর্য বহুগুণ বাড়িয়ে তুলতে NM Furniture.BD-এর আধুনিক ও প্রিমিয়াম ফার্নিচার কালেকশন দেখুন।</p>
-        <a href="#products" class="btn"><i class="fa-solid fa-couch"></i> পণ্যসমূহ দেখুন</a>
+        <h1>
+            <span class="lang-bn">আভিজাত্য ও আরামের অনন্য সমন্বয়</span>
+            <span class="lang-en">Elegance Meets Perfect Comfort</span>
+        </h1>
+        <p>
+            <span class="lang-bn">আপনার ঘরের সৌন্দর্য বহুগুণ বাড়িয়ে তুলতে NM Furniture.BD-এর আধুনিক ও প্রিমিয়াম ফার্নিচার কালেকশন দেখুন।</span>
+            <span class="lang-en">Explore NM Furniture.BD's modern and premium furniture collection to elevate your living space.</span>
+        </p>
+        <a href="#products" class="btn">
+            <i class="fa-solid fa-couch"></i> 
+            <span class="lang-bn">পণ্যসমূহ দেখুন</span>
+            <span class="lang-en">View Collection</span>
+        </a>
     </section>
 
     <section class="container" id="products">
         <div class="section-header">
-            <h2>আমাদের প্রিমিয়াম কালেকশন</h2>
-            <p>সেরা মানের উপাদান ও আধুনিক ডিজাইনে তৈরি আপনার পছন্দের ফার্নিচার</p>
+            <h2>
+                <span class="lang-bn">আমাদের প্রিমিয়াম কালেকশন</span>
+                <span class="lang-en">Our Premium Collection</span>
+            </h2>
+            <p>
+                <span class="lang-bn">সেরা মানের উপাদান ও আধুনিক ডিজাইনে তৈরি আপনার পছন্দের ফার্নিচার</span>
+                <span class="lang-en">Crafted with top-quality materials and modern aesthetics for your home</span>
+            </p>
         </div>
 
         <div class="product-grid">
@@ -520,15 +554,20 @@
             <div class="product-card">
                 <div class="product-img-wrapper">
                     <span class="badge">New Arrival</span>
-                    <img src="https://raw.githubusercontent.com/Riyadlasker/nmfurniture-/main/picture/nm2.jpg" alt="Boucle Luxury Curved Sofa">
+                    <img src="picture/nm2.jpg" alt="Modern Sofa Set" onerror="this.src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500'">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Boucle Luxury Curved Sofa Set</h3>
-                    <p class="product-desc">আধুনিক অসামান্য ডিজাইনের বুকল ফ্যাব্রিক কার্ভড সোফা সেট। এটি আপনার ড্রয়িং রুমে দেবে রাজকীয় ও লাক্সারি লুক।</p>
+                    <h3 class="product-title">Modern Luxury Sofa Set</h3>
+                    <ul class="product-features">
+                        <li><i class="fa-solid fa-check"></i> Contemporary & Luxury Designs</li>
+                        <li><i class="fa-solid fa-check"></i> Premium Quality Materials</li>
+                        <li><i class="fa-solid fa-check"></i> Ultimate Comfort & Durability</li>
+                        <li><i class="fa-solid fa-check"></i> Custom Order Available</li>
+                    </ul>
                     <div class="product-bottom">
-                        <div class="product-price">৳ ৮০,০০০</div>
-                        <a href="tel:01988954281" class="btn-call"><i class="fa-solid fa-phone"></i> কল</a>
-                        <a href="#order" onclick="selectProduct('Boucle Luxury Curved Sofa Set')" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> অর্ডার</a>
+                        <div class="product-price">BDT 80,000</div>
+                        <a href="tel:01988954281" class="btn-call"><i class="fa-solid fa-phone"></i> <span class="lang-bn">কল</span><span class="lang-en">Call</span></a>
+                        <a href="#order" onclick="selectProduct('Modern Luxury Sofa Set')" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> <span class="lang-bn">অর্ডার</span><span class="lang-en">Order</span></a>
                     </div>
                 </div>
             </div>
@@ -536,15 +575,20 @@
             <div class="product-card">
                 <div class="product-img-wrapper">
                     <span class="badge">Popular</span>
-                    <img src="https://raw.githubusercontent.com/Riyadlasker/nmfurniture-/main/picture/nm10.jpg" alt="Olive Green L-Shape Sofa">
+                    <img src="picture/nm3.jpg" alt="Modern L-Shape Sofa" onerror="this.src='https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500'">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Olive Green Modern L-Shape Sofa</h3>
-                    <p class="product-desc">প্রিমিয়াম কোয়ালিটির সফট ভেলভেট/টেক্সচার্ড ফেব্রিক ও মজবুত ফ্রেমে তৈরি আরামদায়ক L-শেপ সোফা সেট।</p>
+                    <h3 class="product-title">Modern Luxury L Sofa Design</h3>
+                    <ul class="product-features">
+                        <li><i class="fa-solid fa-check"></i> Great in Looks & Quality</li>
+                        <li><i class="fa-solid fa-check"></i> Furniture that Embraces Lifestyle</li>
+                        <li><i class="fa-solid fa-check"></i> Premium Velvet/Leather Fabrics</li>
+                        <li><i class="fa-solid fa-check"></i> Customizable Options</li>
+                    </ul>
                     <div class="product-bottom">
-                        <div class="product-price">৳ ৬৫,০০০</div>
-                        <a href="tel:01988954281" class="btn-call"><i class="fa-solid fa-phone"></i> কল</a>
-                        <a href="#order" onclick="selectProduct('Olive Green Modern L-Shape Sofa')" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> অর্ডার</a>
+                        <div class="product-price">BDT 115,000</div>
+                        <a href="tel:01988954281" class="btn-call"><i class="fa-solid fa-phone"></i> <span class="lang-bn">কল</span><span class="lang-en">Call</span></a>
+                        <a href="#order" onclick="selectProduct('Modern Luxury L Sofa Design')" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> <span class="lang-bn">অর্ডার</span><span class="lang-en">Order</span></a>
                     </div>
                 </div>
             </div>
@@ -552,60 +596,80 @@
             <div class="product-card">
                 <div class="product-img-wrapper">
                     <span class="badge">Trending</span>
-                    <img src="https://raw.githubusercontent.com/Riyadlasker/nmfurniture-/main/picture/nm14.jpg" alt="Boucle Fabric Dining Chair">
+                    <img src="picture/nm4.jpg" alt="Dining Table" onerror="this.src='https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?w=500'">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Luxury Boucle Dining Chair</h3>
-                    <p class="product-desc">ইমপোর্টেড গোল্ডেন মেটাল লেগ এবং প্রিমিয়াম বুকল ফেব্রিক দিয়ে তৈরি ডাইনিং কিংবা একসেন্ট চেয়ার।</p>
+                    <h3 class="product-title">Luxury Boucle Dining Table Set</h3>
+                    <ul class="product-features">
+                        <li><i class="fa-solid fa-check"></i> Perfect for Family Dining</li>
+                        <li><i class="fa-solid fa-check"></i> Size, Color & Wood Customizable</li>
+                        <li><i class="fa-solid fa-check"></i> High Quality Fabric Limit 600/- Tk</li>
+                        <li><i class="fa-solid fa-check"></i> Durable Solid Wood Frame</li>
+                    </ul>
                     <div class="product-bottom">
-                        <div class="product-price">৳ ১২,৫০৮</div>
-                        <a href="tel:01988954281" class="btn-call"><i class="fa-solid fa-phone"></i> কল</a>
-                        <a href="#order" onclick="selectProduct('Luxury Boucle Dining Chair')" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> অর্ডার</a>
+                        <div class="product-price">BDT 125,000</div>
+                        <a href="tel:01988954281" class="btn-call"><i class="fa-solid fa-phone"></i> <span class="lang-bn">কল</span><span class="lang-en">Call</span></a>
+                        <a href="#order" onclick="selectProduct('Luxury Boucle Dining Table Set')" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> <span class="lang-bn">অর্ডার</span><span class="lang-en">Order</span></a>
                     </div>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://raw.githubusercontent.com/Riyadlasker/nmfurniture-/main/picture/nm7.jpg" alt="Boucle Single Armchair">
+                    <img src="picture/nm5.jpg" alt="Living Space Sofa" onerror="this.src='https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=500'">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Modern Boucle Accent Lounge Chair</h3>
-                    <p class="product-desc">অত্যন্ত আরামদায়ক গোলাকার কার্ভড বুকল সিঙ্গেল চেয়ার, যা আধুনিক ঘরের জন্য পারফেক্ট।</p>
+                    <h3 class="product-title">Premium Living Room Sofa Set</h3>
+                    <ul class="product-features">
+                        <li><i class="fa-solid fa-check"></i> Contemporary & Luxury Look</li>
+                        <li><i class="fa-solid fa-check"></i> High Resilience Foam Cushion</li>
+                        <li><i class="fa-solid fa-check"></i> Long-lasting Durability</li>
+                        <li><i class="fa-solid fa-check"></i> Tailored Color Customization</li>
+                    </ul>
                     <div class="product-bottom">
-                        <div class="product-price">৳ ২২,০০০</div>
-                        <a href="tel:01988954281" class="btn-call"><i class="fa-solid fa-phone"></i> কল</a>
-                        <a href="#order" onclick="selectProduct('Modern Boucle Accent Lounge Chair')" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> অর্ডার</a>
+                        <div class="product-price">BDT 80,000</div>
+                        <a href="tel:01988954281" class="btn-call"><i class="fa-solid fa-phone"></i> <span class="lang-bn">কল</span><span class="lang-en">Call</span></a>
+                        <a href="#order" onclick="selectProduct('Premium Living Room Sofa Set')" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> <span class="lang-bn">অর্ডার</span><span class="lang-en">Order</span></a>
                     </div>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://raw.githubusercontent.com/Riyadlasker/nmfurniture-/main/picture/nm15.jpg" alt="Bedroom Furniture Combo">
+                    <img src="picture/nm6.jpg" alt="L Shape Smart Sofa" onerror="this.src='https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=500'">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Classic Bed & Wardrobe Set</h3>
-                    <p class="product-desc">অভিজাত হেডবোর্ড কিং সাইজ বেড, আধুনিক ওয়ারড্রোব এবং এল-সোফার কম্বো কালেকশন।</p>
+                    <h3 class="product-title">Modern Smart L-Shape Sofa</h3>
+                    <ul class="product-features">
+                        <li><i class="fa-solid fa-check"></i> Smart Living Style</li>
+                        <li><i class="fa-solid fa-check"></i> Premium Materials & Ergonomics</li>
+                        <li><i class="fa-solid fa-check"></i> Perfect for Modern Homes</li>
+                        <li><i class="fa-solid fa-check"></i> Custom Dimensions Available</li>
+                    </ul>
                     <div class="product-bottom">
-                        <div class="product-price">৳ ১,২০,০০০</div>
-                        <a href="tel:01988954281" class="btn-call"><i class="fa-solid fa-phone"></i> কল</a>
-                        <a href="#order" onclick="selectProduct('Classic Bed & Wardrobe Set')" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> অর্ডার</a>
+                        <div class="product-price">BDT 120,000</div>
+                        <a href="tel:01988954281" class="btn-call"><i class="fa-solid fa-phone"></i> <span class="lang-bn">কল</span><span class="lang-en">Call</span></a>
+                        <a href="#order" onclick="selectProduct('Modern Smart L-Shape Sofa')" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> <span class="lang-bn">অর্ডার</span><span class="lang-en">Order</span></a>
                     </div>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://raw.githubusercontent.com/Riyadlasker/nmfurniture-/main/picture/nm19.jpg" alt="Designer Sculptural Chair">
+                    <img src="picture/nm7.jpg" alt="Bed Side Table" onerror="this.src='https://images.unsplash.com/photo-1532323544230-7191fd51bc1b?w=500'">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Sculptural Designer Accent Chair</h3>
-                    <p class="product-desc">ইউনিক ও নান্দনিক স্ট্রাকচারাল ডিজাইনের বুকল চেয়ার। আপনার ড্রয়িং বা লিভিং এরিয়াকে করবে আকর্ষণীয়।</p>
+                    <h3 class="product-title">Modern Luxury Bed Side Table</h3>
+                    <ul class="product-features">
+                        <li><i class="fa-solid fa-check"></i> Sleek & Elegant Aesthetics</li>
+                        <li><i class="fa-solid fa-check"></i> Smooth Sliding Drawers</li>
+                        <li><i class="fa-solid fa-check"></i> High Grade Finish</li>
+                        <li><i class="fa-solid fa-check"></i> Perfect Bed Companion</li>
+                    </ul>
                     <div class="product-bottom">
-                        <div class="product-price">৳ ২৫,০০০</div>
-                        <a href="tel:01988954281" class="btn-call"><i class="fa-solid fa-phone"></i> কল</a>
-                        <a href="#order" onclick="selectProduct('Sculptural Designer Accent Chair')" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> অর্ডার</a>
+                        <div class="product-price">BDT 50,000</div>
+                        <a href="tel:01988954281" class="btn-call"><i class="fa-solid fa-phone"></i> <span class="lang-bn">কল</span><span class="lang-en">Call</span></a>
+                        <a href="#order" onclick="selectProduct('Modern Luxury Bed Side Table')" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> <span class="lang-bn">অর্ডার</span><span class="lang-en">Order</span></a>
                     </div>
                 </div>
             </div>
@@ -615,61 +679,95 @@
 
     <section class="container" id="order">
         <div class="section-header">
-            <h2>অনলাইন অর্ডার ও অনুসন্ধান</h2>
-            <p>আপনার পছন্দের প্রোডাক্ট নির্বাচন করুন অথবা কাস্টম ডিজাইনের জন্য মেসেজ দিন</p>
+            <h2>
+                <span class="lang-bn">অনলাইন অর্ডার ও অনুসন্ধান</span>
+                <span class="lang-en">Online Order & Inquiry</span>
+            </h2>
+            <p>
+                <span class="lang-bn">আপনার পছন্দের প্রোডাক্ট নির্বাচন করুন অথবা কাস্টম ডিজাইনের জন্য মেসেজ দিন</span>
+                <span class="lang-en">Select your preferred furniture or submit a custom inquiry message</span>
+            </p>
         </div>
 
         <div class="order-section">
             <form id="furnitureOrderForm" onsubmit="handleFormSubmit(event)">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="fullName">আপনার নাম *</label>
-                        <input type="text" id="fullName" class="form-control" placeholder="যেমন: আব্দুল্লাহ আল মামুন" required>
+                        <label for="fullName">
+                            <span class="lang-bn">আপনার নাম *</span>
+                            <span class="lang-en">Your Full Name *</span>
+                        </label>
+                        <input type="text" id="fullName" class="form-control" placeholder="e.g. Tanvir Ahmed" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">ফোন নম্বর *</label>
-                        <input type="tel" id="phone" class="form-control" placeholder="যেমন: 01700000000" required>
+                        <label for="phone">
+                            <span class="lang-bn">ফোন নম্বর *</span>
+                            <span class="lang-en">Phone Number *</span>
+                        </label>
+                        <input type="tel" id="phone" class="form-control" placeholder="e.g. 01700000000" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="email">ইমেইল ঠিকানা</label>
-                        <input type="email" id="email" class="form-control" placeholder="আপনার ইমেইল (যদি থাকে)">
+                        <label for="email">
+                            <span class="lang-bn">ইমেইল ঠিকানা</span>
+                            <span class="lang-en">Email Address</span>
+                        </label>
+                        <input type="email" id="email" class="form-control" placeholder="yourmail@gmail.com">
                     </div>
                     <div class="form-group">
-                        <label for="productSelect">পছন্দের ফার্নিচার</label>
+                        <label for="productSelect">
+                            <span class="lang-bn">পছন্দের ফার্নিচার</span>
+                            <span class="lang-en">Selected Furniture</span>
+                        </label>
                         <select id="productSelect" class="form-control">
-                            <option value="General Inquiry">সাধারণ তথ্য / কাস্টম ডিজাইন</option>
-                            <option value="Boucle Luxury Curved Sofa Set">Boucle Luxury Curved Sofa Set</option>
-                            <option value="Olive Green Modern L-Shape Sofa">Olive Green Modern L-Shape Sofa</option>
-                            <option value="Luxury Boucle Dining Chair">Luxury Boucle Dining Chair</option>
-                            <option value="Modern Boucle Accent Lounge Chair">Modern Boucle Accent Lounge Chair</option>
-                            <option value="Classic Bed & Wardrobe Set">Classic Bed & Wardrobe Set</option>
-                            <option value="Sculptural Designer Accent Chair">Sculptural Designer Accent Chair</option>
+                            <option value="General Inquiry">General Inquiry / Custom Design</option>
+                            <option value="Modern Luxury Sofa Set">Modern Luxury Sofa Set</option>
+                            <option value="Modern Luxury L Sofa Design">Modern Luxury L Sofa Design</option>
+                            <option value="Luxury Boucle Dining Table Set">Luxury Boucle Dining Table Set</option>
+                            <option value="Premium Living Room Sofa Set">Premium Living Room Sofa Set</option>
+                            <option value="Modern Smart L-Shape Sofa">Modern Smart L-Shape Sofa</option>
+                            <option value="Modern Luxury Bed Side Table">Modern Luxury Bed Side Table</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="address">আপনার ঠিকানা</label>
-                    <input type="text" id="address" class="form-control" placeholder="যেমন: বাড়ি নম্বর, রোড, এলাকা, শহর">
+                    <label for="address">
+                        <span class="lang-bn">আপনার ঠিকানা</span>
+                        <span class="lang-en">Delivery Address</span>
+                    </label>
+                    <input type="text" id="address" class="form-control" placeholder="House, Road, Area, City">
                 </div>
 
                 <div class="form-group">
-                    <label for="message">মেসেজ / কাস্টম সাইজ বিস্তারিত</label>
-                    <textarea id="message" class="form-control" rows="4" placeholder="আপনার যদি কোনো বিশেষ কাঠের ধরন, কালার বা সাইজের পছন্দ থাকে তবে এখানে লিখুন..."></textarea>
+                    <label for="message">
+                        <span class="lang-bn">মেসেজ / কাস্টম সাইজ বিস্তারিত</span>
+                        <span class="lang-en">Message / Custom Requirements</span>
+                    </label>
+                    <textarea id="message" class="form-control" rows="4" placeholder="Write any specific color, size or wood preferences..."></textarea>
                 </div>
 
-                <button type="submit" class="btn" style="width: 100%; justify-content: center;"><i class="fa-solid fa-paper-plane"></i> অর্ডার / মেসেজ পাঠান</button>
+                <button type="submit" class="btn" style="width: 100%; justify-content: center;">
+                    <i class="fa-solid fa-paper-plane"></i> 
+                    <span class="lang-bn">অর্ডার / মেসেজ পাঠান</span>
+                    <span class="lang-en">Submit Order / Message</span>
+                </button>
             </form>
         </div>
     </section>
 
     <section class="container" id="contact">
         <div class="section-header">
-            <h2>আমাদের লোকেশন ও যোগাযোগ</h2>
-            <p>আমাদের শোরুমে সরাসরি ভিজিট করে ফার্নিচার যাচাই করুন</p>
+            <h2>
+                <span class="lang-bn">আমাদের লোকেশন ও যোগাযোগ</span>
+                <span class="lang-en">Our Location & Contact</span>
+            </h2>
+            <p>
+                <span class="lang-bn">আমাদের শোরুমে সরাসরি ভিজিট করে ফার্নিচার যাচাই করুন</span>
+                <span class="lang-en">Visit our showroom directly to experience quality furniture</span>
+            </p>
         </div>
 
         <div class="contact-card">
@@ -679,7 +777,7 @@
                 <div class="info-item">
                     <i class="fa-solid fa-location-dot"></i>
                     <div>
-                        <strong>ঠিকানা:</strong><br>
+                        <strong><span class="lang-bn">ঠিকানা:</span><span class="lang-en">Address:</span></strong><br>
                         Cha-88/1, Bir Uttam Rafiqul Islam Avenue,<br>
                         North Badda U-turn, Gulshan,<br>
                         Dhaka-1212, Bangladesh.
@@ -689,7 +787,7 @@
                 <div class="info-item">
                     <i class="fa-solid fa-phone"></i>
                     <div>
-                        <strong>ফোন নম্বর:</strong><br>
+                        <strong><span class="lang-bn">ফোন নম্বর:</span><span class="lang-en">Phone:</span></strong><br>
                         <a href="tel:01988954281" style="color: var(--text-dark); text-decoration: none;">01988-954281</a>
                     </div>
                 </div>
@@ -697,22 +795,25 @@
                 <div class="info-item">
                     <i class="fa-solid fa-envelope"></i>
                     <div>
-                        <strong>ইমেইল:</strong><br>
+                        <strong><span class="lang-bn">ইমেইল:</span><span class="lang-en">Email:</span></strong><br>
                         <a href="mailto:nmfurniturebd1@gmail.com" style="color: var(--text-dark); text-decoration: none;">nmfurniturebd1@gmail.com</a>
                     </div>
                 </div>
 
                 <div class="social-box">
-                    <h4>সোশ্যাল মিডিয়ায় আমাদের ফলো করুন:</h4>
+                    <h4>
+                        <span class="lang-bn">সোশ্যাল মিডিয়ায় আমাদের ফলো করুন:</span>
+                        <span class="lang-en">Follow Us on Social Media:</span>
+                    </h4>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=61564652784895" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://facebook.com/NM Furniture.BD" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="https://instagram.com/nmfurniture01" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class="map-box">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.082522718105!2d90.4228!3d23.7800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQ2JzE4LjAiTiA5MMKwMjUnMjIuMSJF!5e0!3m2!1sen!2sbd!4v1620000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.050302824792!2d90.4225!3d23.7812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79326f55555%3A0x889a74659b8bf1bf!2sNorth%20Badda%20U-Turn%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1710000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -726,18 +827,30 @@
     </footer>
 
     <script>
+        // Select furniture dynamically
         function selectProduct(productName) {
             document.getElementById('productSelect').value = productName;
         }
 
+        // Form Submission Logic
         function handleFormSubmit(event) {
             event.preventDefault();
             const name = document.getElementById('fullName').value;
-            const phone = document.getElementById('phone').value;
             const product = document.getElementById('productSelect').value;
+            const isEnglish = document.body.classList.contains('en-mode');
 
-            alert('ধন্যবাদ ' + name + '! আপনার ' + product + '-এর অর্ডার/মেসেজটি আমরা পেয়েছি। খুব শীঘ্রই 01988-954281 নম্বর থেকে আপনার সাথে যোগাযোগ করা হবে।');
+            if (isEnglish) {
+                alert('Thank you ' + name + '! We have received your order/inquiry for ' + product + '. We will contact you shortly from 01988-954281.');
+            } else {
+                alert('ধন্যবাদ ' + name + '! আপনার ' + product + '-এর অর্ডার/মেসেজটি আমরা পেয়েছি। খুব শীঘ্রই 01988-954281 নম্বর থেকে আপনার সাথে যোগাযোগ করা হবে।');
+            }
+
             document.getElementById('furnitureOrderForm').reset();
+        }
+
+        // Language Switcher Logic
+        function toggleLanguage() {
+            document.body.classList.toggle('en-mode');
         }
     </script>
 </body>
